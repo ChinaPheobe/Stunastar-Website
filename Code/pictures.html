@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(193, 106, 251);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(187, 230, 79);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #fa775c;
+  color: white;
+}
+
+body  {
+  background-image: url("abstract.png");
+  background-color: #cccccc;
+}
+
+</style>
+
+<div class="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a href="aboutus.html">About us</a>
+        <a href="pictures.html">Pictures</a>
+        <a href="productsandservices.html">Products and Services</a>
+        <a href="contactus.html">Contact us</a>
+      </div>
+
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 12</div>
+  <img src="01.png" style="width:50%">
+  <div class="text">STUNASTAR</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 12</div>
+  <img src="02.jpeg" style="width:50%">
+  <div class="text">ALL NATIONS</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 12</div>
+  <img src="03.jpeg" style="width:50%">
+  <div class="text">ALL RACES</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">4 / 12</div>
+    <img src="04.jpg" style="width:50%">
+    <div class="text">POWER IN OUR DIVERSITY</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 12</div>
+    <img src="05.jpg" style="width:50%">
+    <div class="text">ALL GENDERS INVOLVED</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 12</div>
+    <img src="06.jpeg" style="width:50%">
+    <div class="text">BEAUTY IN COLORS</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 12</div>
+    <img src="07.jpg" style="width:50%">
+    <div class="text">ALL AGES</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 12</div>
+    <img src="08.jpg" style="width:50%">
+    <div class="text">LIVE OUT YOUR DREAMS</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 12</div>
+    <img src="09.jpg" style="width:50%">
+    <div class="text">KIDS ROCK WITH US</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">10 / 12</div>
+    <img src="10.jpg" style="width:50%">
+    <div class="text">YOUR SHOE GAME IS COVERED</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">11 / 12</div>
+    <img src="11.jpg" style="width:50%">
+    <div class="text">BE THE BEST YOU</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">12 / 12</div>
+    <img src="12.jpg" style="width:50%">
+    <div class="text">WINNING WAYS</div>
+  </div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
+
+
